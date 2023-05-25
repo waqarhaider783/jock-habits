@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+User-agent: AhrefsSiteAudit
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+
+Sitemap: https://jockhabits.com/sitemap.xml

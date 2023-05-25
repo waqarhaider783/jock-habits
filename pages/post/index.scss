@@ -1,0 +1,130 @@
+@import '~/assets/styles/partials/default-theme/theme.scss';
+.mainWrapper {
+  padding: 0 30px;
+  .categoriesSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 15px 0;
+    .top {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+      .title {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: var(--primaryColor);
+        text-align: left;
+      }
+      .desc {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 400;
+        color: var(--primaryTextColor);
+      }
+    }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 20px;
+      justify-items: center;
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @media (max-width: 640px) {
+        grid-template-columns: repeat(12, 1fr);
+        overflow-x: scroll;
+      }
+    }
+  }
+  .recentBlogs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 15px 0;
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .title {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.4;
+        color: var(--primaryColor);
+        text-align: left;
+      }
+      .viewBtn {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: var(--greyTextColor);
+        text-align: right;
+      }
+    }
+    .blogs {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+    .pagination {
+      justify-self: center;
+    }
+  }
+  .subscribeSection {
+    padding: 25px 0;
+    @media (max-width: 990px) {
+      margin: 0 - 30px;
+    }
+  }
+  .couponSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 15px 0;
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .title {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.4;
+        color: var(--primaryColor);
+        text-align: left;
+        @media (max-width: 540px) {
+          font-size: 20px;
+        }
+      }
+      .viewBtn {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: var(--greyTextColor);
+        text-align: right;
+        @media (max-width: 410px) {
+          display: none;
+        }
+      }
+    }
+    .coupons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+      @media (max-width: 1140px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 860px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+      }
+      @media (max-width: 540px) {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+      }
+    }
+  }
+}
