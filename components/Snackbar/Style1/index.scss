@@ -1,0 +1,87 @@
+@import '~/assets/styles/partials/theme.scss';
+
+.snackbar {
+  position: fixed;
+  z-index: 99;
+
+  display: flex;
+  @include fitContent();
+  min-width: 280px;
+  max-width: 90%;
+  padding: 15px;
+  background-color: var(--info);
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
+    0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
+
+  &.topCenter {
+    top: 24px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  &.topRight {
+    top: 24px;
+    right: 24px;
+    left: auto;
+  }
+
+  &.topLeft {
+    top: 24px;
+    left: 24px;
+    right: auto;
+  }
+
+  &.bottomCenter {
+    bottom: 24px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  &.bottomRight {
+    bottom: 24px;
+    right: 24px;
+    left: auto;
+  }
+
+  &.bottomLeft {
+    bottom: 24px;
+    left: 24px;
+    right: auto;
+  }
+
+  &.success {
+    background-color: var(--success);
+  }
+
+  &.error {
+    background-color: var(--error);
+  }
+
+  &.info {
+    background-color: var(--info);
+  }
+
+  &.warning {
+    background-color: var(--warning);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 15px;
+  }
+
+  &__icon {
+    font-size: 16px;
+    color: var(--whiteTextColor);
+  }
+
+  &__message {
+    font-size: 16px;
+    line-height: 1.2em;
+    color: var(--whiteTextColor);
+  }
+}

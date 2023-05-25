@@ -1,0 +1,58 @@
+@import '~/assets/styles/partials/theme.scss';
+
+.ratBtn {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 20px 0;
+  ::v-deep svg {
+    font-size: 2em;
+    @media (max-width: 450px) {
+      font-size: 1.5em;
+    }
+  }
+  @media (max-width: 920px) {
+    padding: 10px 0;
+  }
+  .rating {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+    padding-top: 7px;
+    cursor: pointer;
+    & > span {
+      background: var(--primaryColor);
+    margin: 0 5px;
+    padding: 8px 3px 0 8px;
+    border-radius: 5px;
+      ::v-deep svg {
+        font-size: 2em;
+        fill: white;
+       
+        @media (max-width: 450px) {
+          font-size: 1.3em;
+        }
+      }
+    }
+    &>span:first-of-type{
+      margin-left: 0;
+    }
+    &>span:last-of-type{
+      margin-right: 0;
+    }
+    .rating--rated {
+      ::v-deep svg {
+        fill: var(--greyColor) !important;
+      }
+    }
+
+    :deep(svg.rating--rated) {
+      fill: var(--greyColor) !important;
+
+      // ::v-deep svg {
+      //   path {
+      //     fill: var(--secondaryColor);
+      //   }
+      // }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import '~/assets/styles/partials/theme.scss';
+.category {
+  border: 1px solid var(--borderColor);
+  padding: 7px 12px;
+  border-radius: 25px;
+  // margin: 0 10px;
+  width: max-content;
+  // flex: 0;
+  &__title {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--primaryTextColor);
+    width: max-content;
+    text-transform: capitalize;
+    &:hover {
+      color: var(--primaryTextColor);
+    }
+    @media (max-width: 540px) {
+      font-size: 12px;
+    }
+  }
+  &:first-of-type {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  @media (max-width: 810px) {
+    margin: 5px;
+  }
+}
+.background {
+  background-color: var(--tertiaryColor);
+  border-radius: 10px;
+  & > a {
+    &:focus {
+      color: var(--primaryTextColor) !important;
+    }
+  }
+}

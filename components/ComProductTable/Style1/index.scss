@@ -1,0 +1,153 @@
+@import '~/assets/styles/partials/theme.scss';
+.brand-highligths {
+  --column-count: 1;
+  overflow-x: hidden;
+  .comparison-highlights {
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), 1fr);
+    overflow-x: scroll;
+
+    & > div {
+      border: 1px solid var(--greyColor);
+      min-width: 250px;
+      @media (max-width: 590px) {
+        min-width: 130px;
+      }
+    }
+    .head {
+      font-size: 16px;
+      line-height: 1.4;
+      font-weight: 700;
+      color: black;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      position: sticky;
+      z-index: 9 !important;
+      background-color: white;
+      top: 0;
+      left: 0;
+      min-width: 260px;
+      @media (max-width: 590px) {
+        min-width: 140px;
+      }
+    }
+    .product {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      justify-items: center;
+      padding: 20px;
+      .productImage {
+        position: relative;
+        width: 130px;
+        height: 0;
+        padding-bottom: calc(100% / 130 * 75);
+        & > img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          border-radius: 10px;
+          object-fit: cover;
+          object-position: center center;
+        }
+      }
+      .title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.4;
+        color: var(--primaryColor);
+      }
+      .desc {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: var(--greyColor);
+        text-align: center;
+        width: 80%;
+      }
+      .check {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: black;
+      }
+      .logo {
+        position: relative;
+        width: 78px;
+        height: 28px;
+        & > img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          top: 0;
+          left: 0;
+          object-position: center center;
+        }
+      }
+    }
+    .free {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 0;
+    }
+    .sleepCount {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--greyColor);
+      text-align: center;
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .productPrice {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--greyColor);
+      text-align: center;
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .couponSection {
+      padding: 15px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      justify-items: center;
+      .title {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 600;
+        color: var(--primaryColor);
+        text-align: center;
+      }
+      .code {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--greyColor);
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .shop-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primaryColor);
+        color: white;
+        font-size: 12px;
+        line-height: 1.4;
+        padding: 10px 20px;
+        border-radius: 25px;
+        width: max-content;
+      }
+    }
+  }
+}

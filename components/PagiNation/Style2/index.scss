@@ -1,0 +1,33 @@
+@import '~/assets/styles/partials/theme.scss';
+
+.pagination {
+  list-style-type: none;
+}
+
+.pagination-item {
+  display: inline-block;
+  padding: 0 10px;
+  & > button {
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: black;
+    &:hover {
+      background: var(--primaryColor);
+      color: white;
+      border-radius: 50%;
+    }
+    &.active {
+      background: var(--primaryColor);
+      color: white;
+      border-radius: 50%;
+    }
+  }
+}
+.pagination-item:first-of-type {
+  padding-left: 0;
+}
+.pagination-item:last-of-type {
+  padding-right: 0;
+}

@@ -1,0 +1,33 @@
+@import '~/assets/styles/partials/theme.scss';
+
+// .reviewRating {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   grid-gap: 10px;
+//   & > li {
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--primaryTextColor);
+  }
+  .ratings {
+    display: flex;
+    align-items: center;
+    & > p {
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 400;
+      color: var(--greyColor);
+    }
+  }
+}
+//   }
+//   @media (max-width: 560px) {
+//     grid-template-columns: 1fr;
+//   }
+// }

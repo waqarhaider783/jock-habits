@@ -1,0 +1,41 @@
+@import '~/assets/styles/partials/theme.scss';
+
+// .rating {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 14px;
+//   color: var(--greyTextColor);
+
+//   &--rated {
+//     color: #ecd32f;
+//   }
+// }
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+  padding-top: 7px;
+  cursor: pointer;
+  & > span {
+    ::v-deep svg {
+      font-size: 1.8em;
+      fill: var(--greyColor);
+      & > path {
+        stroke: var(--greyColor);
+      }
+      @media (max-width: 450px) {
+        font-size: 1.3em;
+      }
+    }
+  }
+  .rating--rated {
+    ::v-deep svg {
+      fill: var(--primaryColor) !important;
+      & > path {
+        stroke: var(--primaryColor) !important;
+      }
+    }
+  }
+}

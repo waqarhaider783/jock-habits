@@ -1,0 +1,51 @@
+@import '~/assets/styles/partials/default-theme/theme.scss';
+.reviewCard {
+  .inner-container {
+    padding: 30px 20px;
+    border: 1px solid var(--greyColor);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    @media (max-width: 540px) {
+      padding: 20px 10px;
+    }
+    .reviewDetail {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      & > p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.7;
+        color: var(--greyTextColor);
+      }
+      & > a {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.7;
+        color: var(--primaryColor);
+      }
+    }
+    .review {
+      border: 1px solid var(--tertiaryColor);
+      border-radius: 10px;
+      padding: 20px;
+      background-color: var(--tertiaryColor);
+      & > p {
+        font-size: 14px;
+        line-height: 1.3;
+        color: var(--primaryTextColor);
+        font-weight: 400;
+        padding: 10px 0;
+      }
+      & > p:first-child {
+        padding-top: 0;
+      }
+
+      & > p:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

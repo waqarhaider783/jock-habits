@@ -1,0 +1,25 @@
+@import '~/assets/styles/partials/theme.scss';
+
+.banner {
+  cursor: pointer;
+
+  &__figure {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding: 0 0 calc((100% * 9) / 17) 0;
+  }
+  .curved {
+    border-radius: 10px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}

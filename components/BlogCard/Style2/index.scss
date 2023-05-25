@@ -1,0 +1,111 @@
+@import '~/assets/styles/partials/theme.scss';
+.blog-card {
+  .inner-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+    @media (max-width: 860px) {
+      grid-template-columns: 1fr;
+    }
+    .image-container {
+      position: relative;
+      width: auto;
+      height: 0;
+      padding-bottom: calc(97% / 290 * 180);
+      margin: 0;
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-position: center;
+        border-radius: 20px;
+      }
+      @media (max-width: 1024px) {
+        padding-bottom: calc(100% / 290 * 240);
+      }
+      @media (max-width: 860px) {
+        padding-bottom: calc(100% / 354 * 252);
+      }
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      height: fit-content;
+      .title {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.4;
+        color: black;
+        text-transform: capitalize;
+        @include trim(2);
+      }
+      .desc {
+        font-size: 16px;
+        line-height: 1.4;
+        color: var(--greyTextColor);
+        font-weight: 400;
+        margin: 0;
+        @include trim(4);
+      }
+      .text {
+        display: flex;
+        align-items: center;
+
+        .date {
+          font-size: 16px;
+          line-height: 1.4;
+          color: black;
+          font-weight: 400;
+          margin: 0;
+          padding-right: 10px;
+        }
+        .author {
+          font-size: 16px;
+          line-height: 1.4;
+          color: black;
+          font-weight: 400;
+          margin: 0;
+        }
+
+        @media (max-width: 460px) {
+          flex-direction: column;
+          align-items: flex-start;
+          .date {
+            padding: 0 0 6px 0;
+          }
+        }
+      }
+      .extra-link {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 1.4;
+        color: var(--greyTextColor);
+        font-weight: 400;
+        & > p {
+          color: black;
+          padding-right: 5px;
+          font-size: 16px;
+          line-height: 1.4;
+          font-weight: 400;
+        }
+      }
+      .card-link {
+        display: flex;
+        align-items: center;
+        background: var(--primaryColor);
+        color: white;
+        padding: 13px 25px;
+        width: fit-content;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        border-radius: 25px;
+      }
+    }
+  }
+}

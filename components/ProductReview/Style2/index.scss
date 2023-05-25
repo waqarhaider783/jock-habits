@@ -1,0 +1,132 @@
+@import '~/assets/styles/partials/theme.scss';
+.productReview {
+  border: 1px solid var(--greyColor);
+  padding: 20px 10px;
+  border-radius: 10px;
+  max-width: 267px;
+  width: 100%;
+
+  .inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+    .image {
+      position: relative;
+      width: 173px;
+      height: 116px;
+      & > img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        top: 0;
+        left: 0;
+      }
+    }
+    .productTitle {
+      font-size: 22px;
+      line-height: 1.4;
+      color: var(--primaryTextColor);
+      font-weight: 700;
+      text-transform: capitalize;
+      text-align: center;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: var(--primaryTextColor);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .company {
+        color: var(--primaryColor);
+      }
+    }
+    .priceContainer {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 5px;
+      justify-items: center;
+      .oldPrice {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1;
+        font-weight: 700;
+        color: var(--greyColor);
+        text-decoration: line-through;
+      }
+      .newPrice {
+        margin: 0;
+        font-size: 35px;
+        line-height: 1.2;
+        color: var(--primaryColor);
+        font-weight: 500;
+      }
+      .desc {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--primaryTextColor);
+      }
+      .deals {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--primaryTextColor);
+      }
+    }
+    .ratingContainer {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 5px;
+      justify-items: center;
+      & > p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--primaryTextColor);
+      }
+    }
+    .followBtn {
+      border: 1px solid var(--greyColor);
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--primaryColor);
+    }
+    .quetion {
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--primaryTextColor);
+      font-weight: 400;
+    }
+    .shopBtn {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.5;
+      background-color: var(--primaryColor);
+      color: white;
+      padding: 10px 30px;
+      border-radius: 25px;
+    }
+  }
+  @media (max-width: 768px) {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media (max-width: 540px) {
+    max-width: max-content;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media (max-width: 350px) {
+    width: 80%;
+  }
+}
