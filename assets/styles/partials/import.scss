@@ -1,0 +1,17 @@
+/* =========================================================== */
+/* -------------Author: Muhammad Usama Zuberi----------------- */
+/* =========================================================== */
+
+@charset "utf-8";
+
+// Partials Starts
+//Styling using globaly in projects.
+//Settings Have Custom Variables and mixins.
+
+@import 'theme';
+// HTML reset CSS.
+@import 'reset';
+// Custom Grid Functions.
+@import 'grid';
+// Default Styling.
+@import 'global';

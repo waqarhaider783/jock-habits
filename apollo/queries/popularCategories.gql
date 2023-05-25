@@ -1,0 +1,5 @@
+query MyQuery {
+  categories(where: { isPopular: { equals: true } }) {
+    name
+  }
+}

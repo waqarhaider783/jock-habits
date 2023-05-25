@@ -1,0 +1,14 @@
+/* =========================================================== */
+/* -------------Author: Muhammad Usama Zuberi----------------- */
+/* =========================================================== */
+
+@charset 'utf-8';
+
+// root Color Goes here..
+@import './partials/default-theme/root-color.scss';
+
+// theme Variables Color and style
+@import './partials/theme.scss';
+
+// styling import using globally for pages
+@import './partials/import.scss';

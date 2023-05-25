@@ -1,0 +1,22 @@
+query MyQuery {
+  posts(
+    skip: 0
+    take: 5
+    orderBy: { createdAt: desc }
+    where: { recommended: { equals: true } }
+  ) {
+    recommended
+    slug
+    imageUrl {
+      publicUrl
+    }
+    brandName
+    title
+    excerpt
+    createdAt
+    externalLinks
+    author {
+      name
+    }
+  }
+}

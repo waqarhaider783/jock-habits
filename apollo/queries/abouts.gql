@@ -1,0 +1,44 @@
+query MyQuery {
+  pages(where: { name: "about-us" }) {
+    edges {
+      node {
+        aboutUs {
+          fieldGroupName
+          aboutUs {
+            description
+            heading
+            image {
+              altText
+              sourceUrl
+            }
+          }
+        }
+        v8SeoSettings {
+          metaTitle
+          metaDescription
+          metaKeywords
+          facebookOgGroup {
+            fbOgTitle
+            fbOgDescription
+            fbOgImage {
+              altText
+              sourceUrl
+            }
+          }
+          twitterCardGroup {
+            twitterCardTitle
+            twitterCardSite
+            twitterCardDescription
+            twitterCardImage {
+              altText
+              sourceUrl
+            }
+          }
+          robotsMetaTag {
+            disableSearchEngineVisibility
+          }
+        }
+      }
+    }
+  }
+}

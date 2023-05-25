@@ -1,0 +1,28 @@
+query MyQuery($id: ID!) {
+  product(where: { id: $id }) {
+    title
+    imageUrl {
+      publicUrl
+    }
+    brand {
+      name
+    }
+    price
+    discountedPrice
+    affiliateLink
+    productLink
+    averageRating
+    productReviews {
+      title
+      body
+      ratingVariables {
+        title
+        ratings
+        labelText
+      }
+      content {
+        document
+      }
+    }
+  }
+}

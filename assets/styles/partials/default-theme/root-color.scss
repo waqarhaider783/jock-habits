@@ -1,0 +1,35 @@
+/* =========================================================== */
+/* -------------Author: Muhammad Usama Zuberi----------------- */
+/* =========================================================== */
+
+/* ==============================
+  DEMO THEME ROOT COLORS STARTS.
+================================= */
+@import './theme';
+
+:root {
+  // Custom variable values only support SassScript inside `#{}`.
+  @each $color, $value in $theme-colors {
+    --#{$color}: #{$value};
+  }
+  @each $color, $value in $grays {
+    --#{$color}: #{$value};
+  }
+
+  --spacing5: 5px;
+  --spacing10: 10px;
+  --spacing: 15px;
+  --gap: 20px;
+}
+
+@media (min-width: 641px) {
+  :root {
+    --gap: 35px;
+  }
+}
+
+@media (min-width: 1080px) {
+  :root {
+    --gap: 50px;
+  }
+}

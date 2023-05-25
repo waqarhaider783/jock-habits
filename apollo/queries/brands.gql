@@ -1,0 +1,9 @@
+query MyQuery($id: ID!) {
+  brands(where: { id: { equals: $id } }) {
+    name
+    description
+    logoUrl {
+      publicUrl
+    }
+  }
+}

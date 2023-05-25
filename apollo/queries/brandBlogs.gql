@@ -1,0 +1,22 @@
+query brandBlogs {
+  posts(
+    skip: 0
+    take: 5
+    orderBy: { updatedAt: desc }
+    where: { brandName: { equals: "Nike" } }
+  ) {
+    brandName
+    title
+    slug
+    imageUrl {
+      publicUrl
+    }
+    updatedAt
+    content {
+      document
+    }
+    author {
+      name
+    }
+  }
+}

@@ -1,0 +1,11 @@
+query MyQuery {
+  coupons(skip: 0, take: 4) {
+    id
+    title
+    customTitle
+    logo {
+      publicUrl
+    }
+    type
+  }
+}

@@ -1,0 +1,16 @@
+query MyQuery {
+  posts(skip: 0) {
+    slug
+    imageUrl {
+      publicUrl
+    }
+    brandName
+    title
+    excerpt
+    createdAt
+    externalLinks
+    author {
+      name
+    }
+  }
+}

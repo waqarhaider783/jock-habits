@@ -1,0 +1,22 @@
+query MyQuery($id: ID!) {
+  posts(where: { id: { equals: $id } }) {
+    title
+    imageUrl {
+      publicUrl
+    }
+    productCategory {
+      name
+    }
+    postCategory {
+      name
+    }
+    updatedAt
+    comparisons {
+      productImage {
+        publicUrl
+      }
+      productTitle
+      productDescription
+    }
+  }
+}

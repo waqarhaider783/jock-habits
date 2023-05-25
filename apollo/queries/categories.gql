@@ -1,0 +1,10 @@
+query MyQuery {
+  categories(skip: 0) {
+    id
+    name
+    isPopular
+    imageUrl {
+      publicUrl
+    }
+  }
+}

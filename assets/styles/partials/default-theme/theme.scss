@@ -1,0 +1,145 @@
+/* =========================================================== */
+/* -------------Author: Muhammad Usama Zuberi----------------- */
+/* =========================================================== */
+
+/* =======
+   MIXINS 
+   ======= */
+@import '../_mixins';
+// -----------------------------------------/
+
+/* =======
+   COLORS 
+   ======= */
+
+//using these variables only for builten function of scss eg: lighten,darken,rgba in colors,
+$primaryColor: #561ed4;
+$primaryContrastColor: #5621cf;
+$secondaryColor: #ffbb52;
+$secondaryContrastColor: #787878;
+$tertiaryColor: #f3f3f3;
+$tertiaryContrastColor: #787878; // Use darkGreyColor. Because same as darkGreyColor.
+$bodyColor: #ffffff;
+$greyColor: #bbbbbb;
+$lightGreyColor: #f5f7f9;
+$darkGreyColor: #8a8a8a;
+$borderColor: #dcdcdc;
+$primaryTextColor: #202020;
+$greyTextColor: #9f9f9f;
+$btnColor: #7d4cfd;
+$disabledBtn: #00acc2;
+$secondaryBtnColor: #2b4edd;
+
+//Transitions
+$transition-short: 0.2s;
+$transition: 0.4s;
+$transition-long: 0.6s;
+
+// default colors starts never change//
+$success: #28a745 !default;
+$info: #17a2b8 !default;
+$warning: #ffc107 !default;
+$error: #dc3545 !default;
+
+// default colors Ends never change//
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primaryColor': $primaryColor,
+    'primaryContrastColor': $primaryContrastColor,
+    'secondaryColor': $secondaryColor,
+    'secondaryContrastColor': $secondaryContrastColor,
+    'tertiaryColor': $tertiaryColor,
+    'tertiaryContrastColor': $tertiaryContrastColor,
+    'bodyColor': $bodyColor,
+    'greyColor': $greyColor,
+    'lightGreyColor': $lightGreyColor,
+    'darkGreyColor': $darkGreyColor,
+    'borderColor': $borderColor,
+    'greyTextColor': $greyTextColor,
+    'primaryTextColor': $primaryTextColor,
+    'btnColor': $btnColor,
+    'disabledBtn': $disabledBtn,
+    'secondaryBtnColor': $secondaryBtnColor,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'error': $error,
+  ),
+  $theme-colors
+);
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    'gray-100': $gray-100,
+    'gray-200': $gray-200,
+    'gray-300': $gray-300,
+    'gray-400': $gray-400,
+    'gray-500': $gray-500,
+    'gray-600': $gray-600,
+    'gray-700': $gray-700,
+    'gray-800': $gray-800,
+    'gray-900': $gray-900,
+  ),
+  $grays
+);
+
+/* ================================
+      Social Media Theme Color
+=================================== */
+$socialMediaThemeColor: (
+  facebook: #3b5998,
+  twitter: #1da1f2,
+  instagram: #dd2a7b,
+  linkedin: #0274b3,
+  google-plus: #dd4d40,
+  pinterest: #e56262,
+  youtube: #d8362a,
+);
+
+@function socialColor($color-name) {
+  @return map-get($socialMediaThemeColor, $color-name);
+}
+// -----------------------------------------/
+
+/* Default Setting */
+$body: (
+  background-color: $white,
+  color: $black,
+  line-height: 1,
+);
+$font-family: 'Open Sans';
+$font-size: 14px;
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  black: 900,
+);
+$font-family-pathname: to-lower-case($font-family);
+$border-radius: 5px;
+$total-grids: 12;
+
+@function body($body-key) {
+  @return map-get($body, $body-key);
+}
+
+@function weights($font-weight) {
+  @return map-get($font-weights, $font-weight);
+}
